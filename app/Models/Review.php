@@ -9,6 +9,8 @@ class Review extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     //relation one to many inverse relation
     public function user(){
         return $this->belongsTo('App\Models\User');

@@ -9,6 +9,8 @@ class Description extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
     //relation one to one
     public function lesson () {
         return $this->belongsTo('App\Models\Lesson');
