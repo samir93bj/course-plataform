@@ -19,7 +19,7 @@ class CreateCoursesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('subtitle');
-            $table->string('description');
+            $table->text('description');
             $table->enum('status', [Course::BORRADOR, Course::REVISION, Course::PUBLICADO])->default(Course::BORRADOR);
             $table->string('slug');
 
