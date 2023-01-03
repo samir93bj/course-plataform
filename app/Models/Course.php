@@ -10,11 +10,20 @@ class Course extends Model
     use HasFactory;
 
     protected $guarded = ['id', 'status'];
+    protected $withCount = ['reviews'];
 
     const BORRADOR = 1;
     const REVISION = 2;
     const PUBLICADO = 3;
 
+    public function getRatingAttribute(){
+
+        if ($this->reviews_count){
+            return round($this->reviews->avg('rating'), 1);
+        } else {
+            return 5;
+        }
+    }
 
     //Relaction one to many
     public function reviews() {
