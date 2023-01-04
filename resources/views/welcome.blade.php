@@ -102,8 +102,8 @@
 
                         </div>
                         <div class="flex justify-center">
-                            <a href="{{ route('courses.index') }}" class="block uppercase mx-auto shadow bg-gray-900 hover:bg-gray-600 focus:shadow-outline focus:outline-none text-white text-xs mt-4 py-3 px-10 rounded">
-                                Catalogo de cursos
+                            <a href="{{ route('course.show', $course) }}" class="block uppercase mx-auto shadow bg-gray-900 hover:bg-gray-600 focus:shadow-outline focus:outline-none text-white text-xs mt-4 py-3 px-10 rounded">
+                                Mas informacion
                             </a>
                         </div>
                     </div>
